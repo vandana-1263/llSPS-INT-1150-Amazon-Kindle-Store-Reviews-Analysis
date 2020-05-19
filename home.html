@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sentiment Analysis Form</title>
+	<link href='https://fonts.googleapis.com/css?family=Poppins:600&display=swap' rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css">
+	<style>
+	body  {
+	background: url(static/emoji4.gif) no-repeat center center fixed; 
+   -webkit-background-size: cover;
+    -moz-background-size: cover;
+  -o-background-size: cover;
+   background-size: 70% 80%;
+	}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+	</style>
+</head>
+<body>
+			<form action="{{ url_for('y_predict')}}"method="post">
+		<center><h1 style="color:green; font-family:Jokerman;">SENTIMENT ANALYSIS</h1><center>
+   		   <hr></hr>
+   		   <h3 style="color:lightpink; font-family:Lucida Calligraphy;"><marquee>PLEASE   LEAVE   YOUR   COMMENT   HERE..</marquee></h3>
+           		   		<center><input type="text" name="Sentence"  style="height: 100px;background-color:lightpink;width:500px;" ></center>
+   		   <br>
+   		   <br>
+   		   <br>
+   		   <br>
+   		   <br>
+   		   <br>
+   		   <br>
+   		   <br>
+		<center><button type="submit" class="button">PREDICT</button></center>
+</form>
+<br>
+
+  <center><h2>RESULT: {{ prediction_text }}</h2><center>
+</body>
+<html> 
